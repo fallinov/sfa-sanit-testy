@@ -13,6 +13,14 @@ export default {
       name: 'age',
       type: 'number',
       title: 'Age'
+    },
+    {
+      name: 'photo',
+      title: 'Photo',
+      type: 'image',
+      options: {
+        hotspot: true,
+      }
     }
   ]
 }
