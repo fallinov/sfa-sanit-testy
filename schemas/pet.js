@@ -54,7 +54,8 @@ export default {
   preview: {
     select: {
       title: 'name',
-      subtitle: 'surname'
+      subtitle: 'surname',
+      media: 'photo'
     }
   }
 
