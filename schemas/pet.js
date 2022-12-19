@@ -9,6 +9,12 @@ export default {
       // icon: CogIcon, // optional
       // default: true, // optional, est le groupe ouvert par défaut
       // hidden: ({currentUser, value, parent}) => true // optional
+    },
+    { name: 'medias',
+      title: 'Médias',
+      // icon: CogIcon, // optional
+      // default: true, // optional, est le groupe ouvert par défaut
+      // hidden: ({currentUser, value, parent}) => true // optional
     }
   ],
   fields: [
@@ -35,12 +41,21 @@ export default {
       name: 'photo',
       title: 'Photo',
       type: 'image',
+      group: 'medias',
       options: {
         hotspot: true,
       }
     },
     { name: 'taille', title: 'Taille', type: 'string', group: 'caracs' },
     { name: 'poids', title: 'Poids', type: 'string', group: 'caracs' },
-    { name: 'couleur', title: 'Couleur', type: 'string',  group: 'caracs' }
-  ]
+    { name: 'couleur', title: 'Couleur', type: 'string',  group: 'caracs' },
+    { name: 'image', title: 'Image', type: 'image',  group: ['caracs', 'medias'] }
+  ],
+  preview: {
+    select: {
+      title: 'name',
+      subtitle: 'surname'
+    }
+  }
+
 }
