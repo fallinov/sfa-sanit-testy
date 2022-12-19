@@ -2,7 +2,7 @@
 export default {
   name: 'pet',
   type: 'document',
-  title: 'Pet',
+  title: 'Animal',
   groups: [
     { name: 'caracs',
       title: 'Caractéristiques',
