@@ -12,7 +12,10 @@ export default {
     {
       name: 'age',
       type: 'number',
-      title: 'Age'
+      title: 'Age',
+      readOnly: ({currentUser}) => {
+        return !(currentUser.roles.find(({name}) => name === 'administrator'))
+      }
     },
     {
       name: 'photo',
