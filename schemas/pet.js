@@ -27,7 +27,11 @@ export default {
     {
       name: 'name',
       type: 'string',
-      title: 'Name'
+      title: 'Name',
+      validation: Rule => [
+        Rule.required().min(2).max(20),
+        Rule.max(20).warning("Un nom court est souvent plus pratique !")
+        ]
     },
     {
       name: 'surname',
@@ -38,6 +42,7 @@ export default {
       name: 'age',
       type: 'number',
       title: 'Age',
+      initialValue: 1,
       readOnly: ({currentUser}) => {
         return !(currentUser.roles.find(({name}) => name === 'administrator'))
       },
@@ -57,6 +62,9 @@ export default {
     { name: 'couleur', title: 'Couleur', type: 'string',  group: 'caracs' },
     { name: 'image', title: 'Image', type: 'image',  group: ['caracs', 'medias'] }
   ],
+  initialValue: {
+    surname: 'Titi'
+  },
   preview: {
     select: {
       title: 'name',
