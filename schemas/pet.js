@@ -19,6 +19,12 @@ export default {
   ],
   fields: [
     {
+      name: 'owner',
+      type: 'reference',
+      title: 'Propriétaire',
+      to: [{type: 'person' }]
+    },
+    {
       name: 'name',
       type: 'string',
       title: 'Name'
