@@ -16,12 +16,14 @@ export default {
   ],
   preview: {
     select: {
-      title: 'title'
+      lastName: 'lastName',
+      firstName: 'firstName'
     },
     prepare(selection) {
-      const {firstName, lastName} = selection
+      const {lastName, firstName} = selection
       return {
-        title: firstName + ' ' + lastName
+        title: `${lastName} ${firstName}`,
       }
+    }
   }
 }
