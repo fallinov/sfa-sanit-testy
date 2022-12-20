@@ -1,5 +1,5 @@
 import pet from './pet'
 import person from './person'
-import pays from './pays'
+import country from './country'
 
-export const schemaTypes = [pet, person, pays]
+export const schemaTypes = [pet, person, country]

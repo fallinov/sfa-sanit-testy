@@ -12,7 +12,20 @@ export default {
       name: 'lastName',
       type: 'string',
       title: 'Nom'
-    }
+    },
+    {
+      title: 'Pays visités',
+      name: 'visitedCountries',
+      type: 'array',
+      of: [
+        {
+          type: 'reference',
+          to: [
+            {type: 'country'}
+          ]
+        }
+      ]
+    },
   ],
   preview: {
     select: {

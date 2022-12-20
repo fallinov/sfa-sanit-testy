@@ -1,5 +1,5 @@
 export default {
-  name: 'pays',
+  name: 'country',
   type: 'document',
   title: 'Pays',
   fields: [
